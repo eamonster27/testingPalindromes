@@ -5,11 +5,14 @@ describe("isPalindrome", function () {
   it("can detect that something isn't a palindrome", function () {
     assert(!isPalindrome("programming"));
     // TODO add some more examples
+    assert(!isPalindrome("testing"));
+    assert(!isPalindrome("what the hell"));
   });
 
   it("can detect one-word lowercased palindromes", function () {
     assert(isPalindrome("level"));
     // TODO add some more examples
+    assert(isPalindrome("racecar"));
   });
 
   it("can detect one-word capitalized palindromes", function () {
@@ -34,17 +37,21 @@ describe("isPalindrome", function () {
 
   it("can detect palindromes with periods", function () {
     // TODO write tests
+    assert(isPalindrome(".Race Car."));
   });
 
   it("can detect palindromes with exclamation marks", function () {
     // TODO write tests
+    assert(isPalindrome("!Race Car!"));
   });
 
   it("can detect palindromes with dashes", function () {
     // TODO write tests
+    assert(isPalindrome("Rac-e- Car"));
   });
 
   it("can detect palindromes with question marks", function () {
     // TODO write tests
+    assert(isPalindrome("?Race Car?"));
   });
 });

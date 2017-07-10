@@ -1,5 +1,7 @@
 function isPalindrome(text) {
   // TODO write this function
+
+  // Assume Palindrome
   var palindrome = true;
 
   // Alter Original
@@ -12,12 +14,12 @@ function isPalindrome(text) {
   var reversed_text = text.split("");
 
   // Iteration calculation
-  var length;
-  if((reversed_text.length % 2) == 0){
+  var iterations;
+  if((reversed_text.length % 2) === 0){
     iterations = reversed_text.length / 2;
   }
   else {
-    iterations = (reversed_text.length + 1) / 2;
+    iterations = (reversed_text.length - 1) / 2;
   }
 
   // Reversal
