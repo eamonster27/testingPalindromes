@@ -2,28 +2,30 @@ function isPalindrome(text) {
   // TODO write this function
   var palindrome = true;
 
-  // Remove spaces
+  // Alter Original
   text = text.replace(/\s/g, '');
   text = text.replace(/,/g, '');
   text = text.toLowerCase();
 
+  // Array conversion
   var original_text = text.split("");
-  // Reversal
   var reversed_text = text.split("");
 
+  // Iteration calculation
+  var length;
   if((reversed_text.length % 2) == 0){
-    for(let j = 0; j < reversed_text.length / 2; ++j){
-      var temp = reversed_text[j];
-      reversed_text[j] = reversed_text[reversed_text.length - (j+1)];
-      reversed_text[reversed_text.length - (j+1)] = temp;
-    }
+    iterations = reversed_text.length / 2;
   }
-  else{
-    for(let j = 0; j < (reversed_text.length + 1) / 2; ++j){
-      var temp = reversed_text[j];
-      reversed_text[j] = reversed_text[reversed_text.length - (j+1)];
-      reversed_text[reversed_text.length - (j+1)] = temp;
-    }
+  else {
+    iterations = (reversed_text.length + 1) / 2;
+  }
+
+  // Reversal
+  var temp;
+  for(let j = 0; j < iterations; ++j){
+    temp = reversed_text[j];
+    reversed_text[j] = reversed_text[reversed_text.length - (j+1)];
+    reversed_text[reversed_text.length - (j+1)] = temp;
   }
 
   // Comparison
